@@ -1,5 +1,5 @@
 import { AuthContainer } from "./AuthContainer/AuthContainer";
 import { NavBar } from "./NavBar/NavBar/NavBar";
-import { BackGround } from "./BackGround/BackGround";
+import { Background, BackgroundShape } from "./Background";
 
-export { NavBar, BackGround, AuthContainer };
+export { NavBar, Background, BackgroundShape, AuthContainer };
