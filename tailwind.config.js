@@ -61,6 +61,11 @@ export default {
           primary: "#fd7e14",
           secondary: "#ffe8cc",
         },
+        error: {
+          main: "#d32f2f",
+          light: "#ef5350",
+          dark: "#c62828",
+        },
       },
     },
   },

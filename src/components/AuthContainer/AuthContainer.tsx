@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import { IAuthContainerProp } from "../../types/interfaces";
+import { IAuthContainerProp } from "../../models/interfaces";
 
 export const AuthContainer = ({ header, children }: IAuthContainerProp) => {
   return (
     <Box
       sx={{
-        width: 600,
+        maxWidth: 500,
         backgroundColor: "background.default",
         borderRadius: 5,
         boxShadow: "0px 0px 10px lightgray",
@@ -15,7 +15,7 @@ export const AuthContainer = ({ header, children }: IAuthContainerProp) => {
         alignItems: "center",
         overflow: "hidden",
       }}>
-      <Typography fontSize={30} variant="h3" fontWeight={800} mb={3}>
+      <Typography fontSize={30} variant="h3" fontWeight={800} mb={4} mt={1}>
         {header}
       </Typography>
       <div className="w-full">{children}</div>

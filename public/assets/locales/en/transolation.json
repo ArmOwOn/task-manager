@@ -19,5 +19,22 @@
     "register": "Signing up to Task Manager",
     "ForgotPass": "Forgot password",
     "PassReset": "Password reset"
+  },
+
+  "email": {
+    "label": "Email",
+    "placeholder": "Enter your email",
+    "error": {
+      "invalid": "Email is invalid"
+    }
+  },
+  "password": {
+    "label": "Password",
+    "placeholder": "Enter your Password",
+    "forgot": "Forgot your password?",
+    "error": {
+      "invalid": "Must contain one uppercase letter and one lowercase letter and one number",
+      "length": "Password should be at least 8 characters long"
+    }
   }
 }
