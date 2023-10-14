@@ -1,0 +1,23 @@
+{
+  "lang": "EN",
+
+  "btn": {
+    "login": "LOGIN",
+    "signup": "SIGN UP"
+  },
+
+  "navbar": {
+    "logo": "Task Manager",
+    "massage": {
+      "have": "already have an account?",
+      "nothave": "new to Task Manager?"
+    }
+  },
+
+  "auth": {
+    "login": "Welcome back to Task Manager",
+    "register": "Signing up to Task Manager",
+    "ForgotPass": "Forgot password",
+    "PassReset": "Password reset"
+  }
+}
