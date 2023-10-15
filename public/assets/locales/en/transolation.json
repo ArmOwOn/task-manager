@@ -5,7 +5,13 @@
     "login": "LOGIN",
     "signup": "SIGN UP",
     "send": "SEND",
-    "reset": "RESET"
+    "reset": "RESET",
+    "back": "BACK",
+    "profile": {
+      "userinfo": "User information",
+      "accountinfo": "Account information",
+      "accountsetting": "Account setting"
+    }
   },
 
   "navbar": {

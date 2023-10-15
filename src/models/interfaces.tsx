@@ -1,4 +1,4 @@
-export interface IAuthContainerProp {
+export interface IAuthContainerProps {
   header: string;
   children: React.ReactNode;
 }
@@ -23,4 +23,9 @@ export interface IForgotPassFormData {
 export interface IResetPassFormData {
   password: string;
   confirmPassword: string;
+}
+
+export interface IProfileSideBarProps {
+  children: React.ReactNode;
+  selectedPage: (data: "userinfo" | "accountinfo" | "accountsetting") => void;
 }

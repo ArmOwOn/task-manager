@@ -5,7 +5,13 @@
     "login": "ورود",
     "signup": "ثبت نام",
     "send": "ارسال",
-    "reset": "تغییر رمز عبور"
+    "reset": "تغییر رمز عبور",
+    "back": "برگشت",
+    "profile": {
+      "userinfo": "مشخصات فردی",
+      "accountinfo": "مشخصات حساب",
+      "accountsetting": "تنظیمات حساب"
+    }
   },
 
   "navbar": {

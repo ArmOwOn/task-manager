@@ -1,4 +1,11 @@
-import { AuthLayout, ForgotPass, Login, Register, ResetPass } from "../pages";
+import {
+  AuthLayout,
+  ForgotPass,
+  Login,
+  ProfileLayout,
+  Register,
+  ResetPass,
+} from "../pages";
 
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -14,6 +21,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="resetpass" element={<ResetPass />} />
       </Route>
+      <Route path="/profile" element={<ProfileLayout />}></Route>
     </Routes>
   );
 }

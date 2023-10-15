@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import { IAuthContainerProp } from "../../models/interfaces";
+import { IAuthContainerProps } from "../../models/interfaces";
 
-export const AuthContainer = ({ header, children }: IAuthContainerProp) => {
+export const AuthContainer = ({ header, children }: IAuthContainerProps) => {
   return (
     <Box
       sx={{
