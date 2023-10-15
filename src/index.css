@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "IRANYekan";
-  src: url("/public/assets/fonts/Qs_Iranyekan.ttf") format("truetype");
+  src: url("/assets/fonts/Qs_Iranyekan.ttf") format("truetype");
 }
 
 body {

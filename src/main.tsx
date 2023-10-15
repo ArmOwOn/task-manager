@@ -9,7 +9,7 @@ import React from "react";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <ThemeProvider theme={themes.blueLight}>
+  <ThemeProvider theme={themes.brandLight}>
     <React.StrictMode>
       <BrowserRouter>
         <CssBaseline />

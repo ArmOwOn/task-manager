@@ -1,8 +1,12 @@
-import { Typography, Avatar } from "@mui/material";
+import { Typography, Avatar, Box, OutlinedInput, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import ErrorIcon from "@mui/icons-material/Error";
+import { useForm, FieldValues } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { IUserInfoFormData } from "../../../models/interfaces";
 
-function stringToColor(string: string) {
+const stringToColor = (string: string) => {
   let hash = 0;
   let i;
   for (i = 0; i < string.length; i += 1) {
@@ -16,8 +20,8 @@ function stringToColor(string: string) {
     color += `00${value.toString(16)}`.slice(-2);
   }
   return color;
-}
-function stringAvatar(name: string) {
+};
+const stringAvatar = (name: string) => {
   return {
     sx: {
       bgcolor: stringToColor(name),
@@ -27,30 +31,104 @@ function stringAvatar(name: string) {
     },
     children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
   };
-}
+};
 
 export const UserInfo = () => {
-  const userName = "Arman Seydi";
+  const fullName = "Arman Seydi";
 
   const [t] = useTranslation("translation");
 
+  const schema = z.object({
+    fistName: z.string().min(3).max(20),
+    lastName: z.string().min(3).max(20),
+    phoneNumber: z.string().min(10).max(20),
+  });
+
+  const onSubmit = (data: FieldValues) => {
+    console.log(data);
+  };
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IUserInfoFormData>({
+    resolver: zodResolver(schema),
+  });
+
   return (
-    <div className="bg-green-primary flex flex-col w-[400px] h-[600px]">
+    <form className="flex flex-col w-[400px]" onSubmit={handleSubmit(onSubmit)}>
       <div>
         <Typography fontSize={30} variant="h3" fontWeight={800} mb={6}>
           {t("btn.profile.userinfo")}
         </Typography>
       </div>
       <div className="flex items-center gap-4">
-        <Avatar {...stringAvatar(userName)} />
+        <Avatar {...stringAvatar(fullName)} />
         <Typography fontSize={25} variant="h5" fontWeight={600}>
-          {userName}
+          {fullName}
         </Typography>
       </div>
-      <div className="flex items-center mb-3">
+      <Box
+        className="flex items-center mb-3 mt-1"
+        sx={{
+          color: "text.disabled",
+        }}>
         <ErrorIcon fontSize="small" sx={{ marginX: 1 }} />
-        {t("userinfo.profile.warning")}
-      </div>
-    </div>
+        {t("userinfo.warning")}
+      </Box>
+
+      <label
+        htmlFor="firstName"
+        className={`my-[3px] mt-3 font-bold cursor-pointer ${
+          errors.firstName && "text-error-main"
+        }`}>
+        {t("userinfo.firstname")}
+      </label>
+      <OutlinedInput
+        id="firstName"
+        {...register("firstName")}
+        error={errors.firstName && true}
+      />
+      {errors.firstName && (
+        <div className="text-error-main">{t("userinfo.firstname.error")}</div>
+      )}
+
+      <label
+        htmlFor="lastName"
+        className={`my-[3px] mt-3 font-bold cursor-pointer ${
+          errors.lastName && "text-error-main"
+        }`}>
+        {t("userinfo.lastname")}
+      </label>
+      <OutlinedInput
+        id="lastName"
+        {...register("lastName")}
+        error={errors.lastName && true}
+      />
+      {errors.lastName && (
+        <div className="text-error-main">{t("userinfo.lastname.error")}</div>
+      )}
+
+      <label
+        htmlFor="phoneNumber"
+        className={`my-[3px] mt-3 font-bold cursor-pointer ${
+          errors.phoneNumber && "text-error-main"
+        }`}>
+        {t("userinfo.phonenumber")}
+      </label>
+      <OutlinedInput
+        id="phoneNumber"
+        error={errors.phoneNumber && true}
+        {...register("phoneNumber")}
+      />
+      {errors.phoneNumber && (
+        <div className="text-error-main">{t("userinfo.phonenumber.error")}</div>
+      )}
+
+      <Button variant="contained" type="submit" size="large" sx={{ mt: 6 }}>
+        {t("btn.signup")}
+      </Button>
+    </form>
   );
 };

@@ -90,7 +90,7 @@ export const ProfileSideBar = ({
       </Paper>
 
       {/* Main content */}
-      <div className="w-full h-full flex flex-col justify-center p-[20px]">
+      <div className="w-full h-full flex flex-col justify-center p-[60px]">
         {children}
       </div>
     </div>

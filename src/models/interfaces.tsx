@@ -24,6 +24,11 @@ export interface IResetPassFormData {
   password: string;
   confirmPassword: string;
 }
+export interface IUserInfoFormData {
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+}
 
 export interface IProfileSideBarProps {
   children: React.ReactNode;
