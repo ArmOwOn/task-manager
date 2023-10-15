@@ -29,10 +29,9 @@ export const NavBar = () => {
               <Button
                 color="inherit"
                 sx={{
-                  backgroundColor: "primary.dark",
+                  backgroundColor: "secondary.main",
                   "&:hover": {
-                    backgroundColor: "primary.dark",
-                    opacity: [0.9, 0.8, 0.7],
+                    backgroundColor: "secondary.dark",
                   },
                 }}>
                 {t("btn.login")}

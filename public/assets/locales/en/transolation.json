@@ -3,7 +3,9 @@
 
   "btn": {
     "login": "LOGIN",
-    "signup": "SIGN UP"
+    "signup": "SIGN UP",
+    "send": "SEND",
+    "reset": "RESET"
   },
 
   "navbar": {
@@ -17,9 +19,11 @@
   "auth": {
     "login": "Welcome back to Task Manager",
     "register": "Signing up to Task Manager",
-    "ForgotPass": "Forgot password",
-    "PassReset": "Password reset"
+    "forgotpass": "Forgot password",
+    "resetpass": "Password reset"
   },
+
+  "forgotpass": "The password recovery link has been emailed to you. please check your email.",
 
   "username": {
     "label": "Username",

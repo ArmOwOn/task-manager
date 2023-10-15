@@ -11,11 +11,6 @@ export const Register = () => {
   const [t] = useTranslation("translation");
 
   // Define validation schema using Zod.
-  const passwordSchema = z
-    .string()
-    .min(8, t("password.error.length"))
-    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/, t("password.error.invalid"));
-
   const schema = z
     .object({
       username: z
@@ -23,7 +18,13 @@ export const Register = () => {
         .min(3, t("username.error.length"))
         .regex(/^[a-zA-Z0-9_]+$/, t("username.error.invalid")),
       email: z.string().email(t("email.error.invalid")),
-      password: passwordSchema,
+      password: z
+        .string()
+        .min(8, t("password.error.length"))
+        .regex(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/,
+          t("password.error.invalid")
+        ),
       confirmPassword: z.string(),
       guidelines: z.boolean().refine((value) => value === true, {
         message: t("guidelines.error.invalid"),

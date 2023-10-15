@@ -8,7 +8,7 @@ const blueLight = createTheme({
       main: "#228be6",
     },
     secondary: {
-      main: "#15aabf",
+      main: "#f7b103",
     },
     background: {
       paper: "#d0ebff",
@@ -204,7 +204,7 @@ const blueDark = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#228be6",
+      main: "#f7b103",
     },
     secondary: {
       main: "#15aabf",

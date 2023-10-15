@@ -15,3 +15,12 @@ export interface IRegisterFormData {
   confirmPassword: string;
   guidelines: boolean;
 }
+
+export interface IForgotPassFormData {
+  email: string;
+}
+
+export interface IResetPassFormData {
+  password: string;
+  confirmPassword: string;
+}
