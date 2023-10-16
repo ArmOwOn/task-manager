@@ -7,10 +7,23 @@
     "send": "ارسال",
     "reset": "تغییر رمز عبور",
     "back": "برگشت",
+    "savechanges": "ثبت تغییرات",
     "profile": {
       "userinfo": "مشخصات فردی",
       "accountinfo": "مشخصات حساب",
       "accountsetting": "تنظیمات حساب"
+    }
+  },
+
+  "userinfo": {
+    "firstname": "نام",
+    "lastname": "نام خانوادگی",
+    "phonenumber": "شماره موبایل",
+    "warning": "این تصویر برای عموم قابل نمایش است.",
+    "errors": {
+      "fistname": "نام وارد شده معتبر نیست.",
+      "lastname": "نام خانوادگی وارد شده معتبر نیست.",
+      "phonenumber": "شماره موبایل وارد شده معتبر نیست."
     }
   },
 

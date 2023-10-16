@@ -39,7 +39,7 @@ export const ProfileSideBar = ({
           width: "25%",
           minWidth: 300,
           height: "100%",
-          backgroundColor: "background.paper",
+          backgroundColor: "background.default",
           boxShadow: 15,
           paddingY: 10,
           paddingX: 3,
@@ -49,7 +49,7 @@ export const ProfileSideBar = ({
           <Button
             color="secondary"
             variant="contained"
-            sx={{ fontWeight: 600 }}>
+            sx={{ fontWeight: 600, color: "white" }}>
             {t("btn.back")}
           </Button>
         </div>

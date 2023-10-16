@@ -6,11 +6,24 @@
     "signup": "SIGN UP",
     "send": "SEND",
     "reset": "RESET",
+    "savechanges": "SAVE CHANGES",
     "back": "BACK",
     "profile": {
       "userinfo": "User information",
       "accountinfo": "Account information",
       "accountsetting": "Account setting"
+    }
+  },
+
+  "userinfo": {
+    "firstname": "First name",
+    "lastname": "Last name",
+    "phonenumber": "Phonenumber",
+    "warning": "everyone can see this image.",
+    "errors": {
+      "fistname": "Invalid first name.",
+      "lastname": "Invalid last name.",
+      "phonenumber": "Invalid phonenumber."
     }
   },
 

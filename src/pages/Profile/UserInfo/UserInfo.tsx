@@ -5,6 +5,7 @@ import { useForm, FieldValues } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { IUserInfoFormData } from "../../../models/interfaces";
+import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 
 const stringToColor = (string: string) => {
   let hash = 0;
@@ -63,8 +64,14 @@ export const UserInfo = () => {
           {t("btn.profile.userinfo")}
         </Typography>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 relative">
         <Avatar {...stringAvatar(fullName)} />
+        <label
+          className="opacity-0  hover:opacity-75 transition-opacity duration-500 cursor-pointer absolute flex flex-col justify-center items-center bg-slate-300 rounded-full w-[100px] h-[100px]"
+          htmlFor="profilePic">
+          <input type="file" id="profilePic" className="hidden" />
+          <PhotoCameraIcon fontSize="large" />
+        </label>
         <Typography fontSize={25} variant="h5" fontWeight={600}>
           {fullName}
         </Typography>
@@ -91,7 +98,7 @@ export const UserInfo = () => {
         error={errors.firstName && true}
       />
       {errors.firstName && (
-        <div className="text-error-main">{t("userinfo.firstname.error")}</div>
+        <div className="text-error-main">{t("userinfo.errors.firstname")}</div>
       )}
 
       <label
@@ -107,7 +114,7 @@ export const UserInfo = () => {
         error={errors.lastName && true}
       />
       {errors.lastName && (
-        <div className="text-error-main">{t("userinfo.lastname.error")}</div>
+        <div className="text-error-main">{t("userinfo.errors.lastname")}</div>
       )}
 
       <label
@@ -123,11 +130,13 @@ export const UserInfo = () => {
         {...register("phoneNumber")}
       />
       {errors.phoneNumber && (
-        <div className="text-error-main">{t("userinfo.phonenumber.error")}</div>
+        <div className="text-error-main">
+          {t("userinfo.errors.phonenumber")}
+        </div>
       )}
 
       <Button variant="contained" type="submit" size="large" sx={{ mt: 6 }}>
-        {t("btn.signup")}
+        {t("btn.savechanges")}
       </Button>
     </form>
   );

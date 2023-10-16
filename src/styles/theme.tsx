@@ -130,6 +130,9 @@ const brandLight = createTheme({
     primary: {
       main: "#208d8e",
     },
+    secondary: {
+      main: "#15aabf",
+    },
     background: {
       paper: "#c2f7fa",
     },
@@ -304,6 +307,9 @@ const brandDark = createTheme({
     mode: "dark",
     primary: {
       main: "#208d8e",
+    },
+    secondary: {
+      main: "#15aabf",
     },
   },
   typography: {
