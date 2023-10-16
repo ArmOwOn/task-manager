@@ -4,24 +4,25 @@ import ErrorIcon from "@mui/icons-material/Error";
 import { useForm, FieldValues } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { IUserInfoFormData } from "../../../models/interfaces";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
+import { IUserInfoFormData } from "../../../models/interfaces";
 
+// Helper function to generate a background color for Avatar based on a string
 const stringToColor = (string: string) => {
   let hash = 0;
-  let i;
-  for (i = 0; i < string.length; i += 1) {
+  for (let i = 0; i < string.length; i++) {
     hash = string.charCodeAt(i) + ((hash << 5) - hash);
   }
 
   let color = "#";
-
-  for (i = 0; i < 3; i += 1) {
+  for (let i = 0; i < 3; i++) {
     const value = (hash >> (i * 8)) & 0xff;
     color += `00${value.toString(16)}`.slice(-2);
   }
   return color;
 };
+
+// Helper function to create an Avatar with initials
 const stringAvatar = (name: string) => {
   return {
     sx: {
@@ -37,18 +38,22 @@ const stringAvatar = (name: string) => {
 export const UserInfo = () => {
   const fullName = "Arman Seydi";
 
+  // Initialize translation hook
   const [t] = useTranslation("translation");
 
+  // Define the validation schema using Zod
   const schema = z.object({
-    fistName: z.string().min(3).max(20),
+    firstName: z.string().min(3).max(20),
     lastName: z.string().min(3).max(20),
     phoneNumber: z.string().min(10).max(20),
   });
 
+  // Form submission handler
   const onSubmit = (data: FieldValues) => {
     console.log(data);
   };
 
+  // Initialize useForm with ZodResolver
   const {
     register,
     handleSubmit,
@@ -60,11 +65,13 @@ export const UserInfo = () => {
   return (
     <form className="flex flex-col w-[400px]" onSubmit={handleSubmit(onSubmit)}>
       <div>
+        {/* User Info Header */}
         <Typography fontSize={30} variant="h3" fontWeight={800} mb={6}>
           {t("btn.profile.userinfo")}
         </Typography>
       </div>
       <div className="flex items-center gap-4 relative">
+        {/* User Avatar and Profile Picture Upload */}
         <Avatar {...stringAvatar(fullName)} />
         <label
           className="opacity-0  hover:opacity-75 transition-opacity duration-500 cursor-pointer absolute flex flex-col justify-center items-center bg-slate-300 rounded-full w-[100px] h-[100px]"
@@ -81,10 +88,12 @@ export const UserInfo = () => {
         sx={{
           color: "text.disabled",
         }}>
+        {/* Warning */}
         <ErrorIcon fontSize="small" sx={{ marginX: 1 }} />
         {t("userinfo.warning")}
       </Box>
 
+      {/* First Name Input */}
       <label
         htmlFor="firstName"
         className={`my-[3px] mt-3 font-bold cursor-pointer ${
@@ -101,6 +110,7 @@ export const UserInfo = () => {
         <div className="text-error-main">{t("userinfo.errors.firstname")}</div>
       )}
 
+      {/* Last Name Input */}
       <label
         htmlFor="lastName"
         className={`my-[3px] mt-3 font-bold cursor-pointer ${
@@ -117,6 +127,7 @@ export const UserInfo = () => {
         <div className="text-error-main">{t("userinfo.errors.lastname")}</div>
       )}
 
+      {/* Phone Number Input */}
       <label
         htmlFor="phoneNumber"
         className={`my-[3px] mt-3 font-bold cursor-pointer ${
@@ -135,6 +146,7 @@ export const UserInfo = () => {
         </div>
       )}
 
+      {/* Save Changes Button */}
       <Button variant="contained" type="submit" size="large" sx={{ mt: 6 }}>
         {t("btn.savechanges")}
       </Button>

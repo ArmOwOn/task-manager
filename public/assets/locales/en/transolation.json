@@ -21,7 +21,7 @@
     "phonenumber": "Phonenumber",
     "warning": "everyone can see this image.",
     "errors": {
-      "fistname": "Invalid first name.",
+      "firstname": "Invalid first name.",
       "lastname": "Invalid last name.",
       "phonenumber": "Invalid phonenumber."
     }
