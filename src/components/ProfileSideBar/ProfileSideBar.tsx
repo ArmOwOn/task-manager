@@ -5,6 +5,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import { IProfileSideBarProps } from "../../models/interfaces";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 // Define the ProfileSideBar component
 export const ProfileSideBar = ({
@@ -46,10 +47,15 @@ export const ProfileSideBar = ({
         }}>
         {/* Back button */}
         <div className="mt-[50px]">
-          <Button
-            color="secondary"
-            variant="contained"
-            sx={{ fontWeight: 600, color: "white" }}>
+          <Button color="primary" variant="contained" sx={{ fontWeight: 600 }}>
+            <ArrowBackIcon
+              fontSize="small"
+              className={
+                document.body.dir === "rtl"
+                  ? "transform rotate-180 ml-2"
+                  : "mr-2"
+              }
+            />
             {t("btn.back")}
           </Button>
         </div>

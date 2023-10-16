@@ -11,6 +11,7 @@ export const LangToggle = () => {
   const [, i18n] = useTranslation("transolation");
   const hanldeChangeLang = () => {
     i18n.changeLanguage(cookies.get("i18next") === "fa" ? "en" : "fa");
+    window.location.reload();
   };
   useEffect(() => {
     document.body.dir = currentLanguageDir;
