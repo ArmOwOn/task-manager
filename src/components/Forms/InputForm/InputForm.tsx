@@ -37,14 +37,7 @@ export const InputForm: React.FC<IInputFormProps> = ({
 
       {/* Render form fields */}
       {fields.map((field) => (
-        <div
-          key={field.name}
-          className={`flex flex-col pt-3 ${
-            field.type === "checkbox"
-              ? "flex-row-reverse justify-end"
-              : "flex-col"
-          }
-          `}>
+        <div key={field.name} className="flex flex-col pt-3">
           {field.type === "checkbox" ? (
             <div className="flex flex-row">
               {/* Checkbox input field with error handling */}

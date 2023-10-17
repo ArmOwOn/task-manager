@@ -1,20 +1,14 @@
 import { FieldValues } from "react-hook-form";
 import { AuthContainer, InputForm } from "../../../components";
 import { useTranslation } from "react-i18next";
-import { z } from "zod";
 import { useState } from "react";
+import { useCustomSchema } from "../../../models/schemas";
 
 export const ForgotPass = () => {
-  // State for tracking whether the form is submitted
+  // Initialize necessary hooks and variables
   const [isSent, setIsSent] = useState(false);
-
-  // Initialize the translation hook.
   const [t] = useTranslation("translation");
-
-  // Define validation schema using Zod.
-  const schema = z.object({
-    email: z.string().email(t("email.error.invalid")),
-  });
+  const schema = useCustomSchema("email");
 
   // Handle form submission.
   const onSubmit = (data: FieldValues) => {

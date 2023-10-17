@@ -4,16 +4,13 @@ import { DarkMode } from "../DarkMode/DarkMode";
 import { useTranslation } from "react-i18next";
 
 export const NavBar = () => {
+  // Initialize necessary hooks and variables
   const theme = useTheme();
   const [t] = useTranslation("transolation");
 
   return (
     <div className="absolute z-10 w-full">
-      <Box
-        sx={{
-          paddingX: "20px",
-          flexGrow: 1,
-        }}>
+      <Box sx={{ paddingX: "20px", flexGrow: 1 }}>
         <Box
           position="static"
           sx={{
@@ -22,7 +19,9 @@ export const NavBar = () => {
             boxShadow: 0,
           }}>
           <Toolbar className="justify-between text-left">
+            {/* Left side of the navbar */}
             <div className="flex items-center">
+              {/* Logo */}
               <Typography
                 variant="h4"
                 mx={1}
@@ -34,15 +33,20 @@ export const NavBar = () => {
                 }}>
                 {t("navBar.logo")}
               </Typography>
+              {/* Language toggle and Dark mode components */}
               <div className="mx-5">
                 <LangToggle />
                 <DarkMode />
               </div>
             </div>
+
+            {/* Right side of the navbar */}
             <div className="flex items-center">
+              {/* Message */}
               <Typography fontSize={15} mx={1} sx={{ color: "text.primary" }}>
-                {t("navBar.massage.notHave")}
+                {t("navBar.message.notHave")}
               </Typography>
+              {/* Login button */}
               <Button
                 color="primary"
                 variant="contained"

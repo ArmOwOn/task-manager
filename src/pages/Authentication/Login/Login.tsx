@@ -1,20 +1,12 @@
 import { FieldValues } from "react-hook-form";
 import { AuthContainer, InputForm } from "../../../components";
 import { useTranslation } from "react-i18next";
-import { z } from "zod";
+import { useCustomSchema } from "../../../models/schemas";
 
 export const Login = () => {
-  // Initialize the translation hook.
+  // Initialize necessary hooks and variables
   const [t] = useTranslation("translation");
-
-  // Define validation schema using Zod.
-  const schema = z.object({
-    email: z.string().email(t("email.error.invalid")),
-    password: z
-      .string()
-      .min(8, t("password.error.length"))
-      .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/, t("password.error.invalid")),
-  });
+  const schema = useCustomSchema("login");
 
   // Handle form submission.
   const onSubmit = (data: FieldValues) => {

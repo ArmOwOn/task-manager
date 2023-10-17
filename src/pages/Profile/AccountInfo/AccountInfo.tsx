@@ -6,7 +6,7 @@ import { z } from "zod";
 import { IAccountInfoFormData } from "../../../models/interfaces";
 
 export const AccountInfo = () => {
-  // Initialize translation hook
+  // Initialize necessary hooks and variables
   const [t] = useTranslation("translation");
 
   // Define the validation schema using Zod

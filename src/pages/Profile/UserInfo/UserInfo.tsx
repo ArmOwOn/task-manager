@@ -36,10 +36,9 @@ const stringAvatar = (name: string) => {
 };
 
 export const UserInfo = () => {
-  const fullName = "Arman Seydi";
-
-  // Initialize translation hook
+  // Initialize necessary hooks and variables
   const [t] = useTranslation("translation");
+  const fullName = "Arman Seydi";
 
   // Define the validation schema using Zod
   const schema = z
@@ -115,7 +114,7 @@ export const UserInfo = () => {
         }}>
         {/* Warning */}
         <ErrorIcon fontSize="small" sx={{ marginX: 1 }} />
-        {t("userinfo.warning")}
+        {t("userInfo.warning")}
       </Box>
 
       {/* First Name Input */}
@@ -124,7 +123,7 @@ export const UserInfo = () => {
         className={`my-[3px] mt-3 font-bold cursor-pointer ${
           errors.firstName && "text-error-main"
         }`}>
-        {t("userinfo.firstname")}
+        {t("userInfo.firstName")}
       </label>
       <OutlinedInput
         id="firstName"
@@ -132,7 +131,7 @@ export const UserInfo = () => {
         error={errors.firstName && true}
       />
       {errors.firstName && (
-        <div className="text-error-main">{t("userinfo.errors.firstname")}</div>
+        <div className="text-error-main">{t("userInfo.errors.firstName")}</div>
       )}
 
       {/* Last Name Input */}
@@ -141,7 +140,7 @@ export const UserInfo = () => {
         className={`my-[3px] mt-3 font-bold cursor-pointer ${
           errors.lastName && "text-error-main"
         }`}>
-        {t("userinfo.lastname")}
+        {t("userInfo.lastName")}
       </label>
       <OutlinedInput
         id="lastName"
@@ -149,7 +148,7 @@ export const UserInfo = () => {
         error={errors.lastName && true}
       />
       {errors.lastName && (
-        <div className="text-error-main">{t("userinfo.errors.lastname")}</div>
+        <div className="text-error-main">{t("userInfo.errors.lastName")}</div>
       )}
 
       {/* Phone Number Input */}
@@ -158,7 +157,7 @@ export const UserInfo = () => {
         className={`my-[3px] mt-3 font-bold cursor-pointer ${
           errors.phoneNumber && "text-error-main"
         }`}>
-        {t("userinfo.phonenumber")}
+        {t("userInfo.phoneNumber")}
       </label>
       <OutlinedInput
         id="phoneNumber"
@@ -167,7 +166,7 @@ export const UserInfo = () => {
       />
       {errors.phoneNumber && (
         <div className="text-error-main">
-          {t("userinfo.errors.phonenumber")}
+          {t("userInfo.errors.phoneNumber")}
         </div>
       )}
 

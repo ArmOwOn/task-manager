@@ -29,7 +29,7 @@
 
   "navBar": {
     "logo": "Quera Task Manager",
-    "massage": {
+    "message": {
       "have": "already have an account?",
       "notHave": "new to Task Manager?"
     }
