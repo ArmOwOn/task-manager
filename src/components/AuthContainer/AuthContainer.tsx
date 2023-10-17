@@ -5,7 +5,7 @@ export const AuthContainer = ({ header, children }: IAuthContainerProps) => {
   return (
     <Box
       sx={{
-        width: 500,
+        width: 600,
         backgroundColor: "background.default",
         borderRadius: 5,
         boxShadow: 6,

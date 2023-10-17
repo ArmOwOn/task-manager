@@ -19,7 +19,10 @@ export const LangToggle = () => {
       currentLanguageDir === "rtl" ? "مدیریت وظایف" : "Task Manager";
   }, [currentLanguageDir]);
   return (
-    <IconButton onClick={() => hanldeChangeLang()} color="inherit">
+    <IconButton
+      onClick={() => hanldeChangeLang()}
+      color="inherit"
+      sx={{ color: "primary.main" }}>
       <Typography fontSize={15}>
         <PublicIcon />
       </Typography>

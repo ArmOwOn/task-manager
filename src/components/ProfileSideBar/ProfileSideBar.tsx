@@ -64,17 +64,17 @@ export const ProfileSideBar = ({
         <div className="flex flex-col justify-between h-[150px] my-[100px]">
           {[
             {
-              label: t("btn.profile.userinfo"),
+              label: t("btn.profile.userInfo"),
               icon: <PersonIcon sx={{ marginLeft: 1 }} />,
               state: "userinfo",
             },
             {
-              label: t("btn.profile.accountinfo"),
+              label: t("btn.profile.accountInfo"),
               icon: <AccountBoxIcon fontSize="large" sx={{ marginLeft: 1 }} />,
               state: "accountinfo",
             },
             {
-              label: t("btn.profile.accountsetting"),
+              label: t("btn.profile.accountSetting"),
               icon: <ManageAccountsIcon sx={{ marginLeft: 1 }} />,
               state: "accountsetting",
             },

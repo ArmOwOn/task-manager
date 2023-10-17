@@ -4,7 +4,10 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 
 export const DarkMode = () => {
   return (
-    <IconButton onClick={() => {}} color="inherit">
+    <IconButton
+      onClick={() => {}}
+      color="inherit"
+      sx={{ color: "primary.main" }}>
       {"light" === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
     </IconButton>
   );

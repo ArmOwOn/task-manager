@@ -6,43 +6,43 @@
     "signup": "SIGN UP",
     "send": "SEND",
     "reset": "RESET",
-    "savechanges": "SAVE CHANGES",
+    "saveChanges": "SAVE CHANGES",
     "back": "BACK",
     "profile": {
-      "userinfo": "User information",
-      "accountinfo": "Account information",
-      "accountsetting": "Account setting"
+      "userInfo": "User information",
+      "accountInfo": "Account information",
+      "accountSetting": "Account setting"
     }
   },
 
-  "userinfo": {
-    "firstname": "First name",
-    "lastname": "Last name",
-    "phonenumber": "Phonenumber",
+  "userInfo": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phoneNumber": "Phonenumber",
     "warning": "everyone can see this image.",
     "errors": {
-      "firstname": "Invalid first name.",
-      "lastname": "Invalid last name.",
-      "phonenumber": "Invalid phonenumber."
+      "firstName": "Invalid first name.",
+      "lastName": "Invalid last name.",
+      "phoneNumber": "Invalid phonenumber."
     }
   },
 
-  "navbar": {
-    "logo": "Task Manager",
+  "navBar": {
+    "logo": "Quera Task Manager",
     "massage": {
       "have": "already have an account?",
-      "nothave": "new to Task Manager?"
+      "notHave": "new to Task Manager?"
     }
   },
 
   "auth": {
-    "login": "Welcome back to Task Manager",
-    "register": "Signing up to Task Manager",
-    "forgotpass": "Forgot password",
-    "resetpass": "Password reset"
+    "login": "Welcome back to Qurea Task Manager",
+    "register": "Signing up to Qurea Task Manager",
+    "forgotPass": "Forgot password",
+    "resetPass": "Password reset"
   },
 
-  "forgotpass": "The password recovery link has been emailed to you. please check your email.",
+  "forgotPass": "The password recovery link has been emailed to you. please check your email.",
 
   "username": {
     "label": "Username",
@@ -69,7 +69,7 @@
       "length": "Password should be at least 8 characters long"
     }
   },
-  "confirmpassword": {
+  "confirmPassword": {
     "label": "Confirm Password",
     "placeholder": "Confirm your Password",
     "error": {

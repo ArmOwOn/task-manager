@@ -23,7 +23,7 @@ export const ResetPass = () => {
       confirmPassword: z.string(),
     })
     .refine((data) => data.password === data.confirmPassword, {
-      message: t("confirmpassword.error.invalid"),
+      message: t("confirmPassword.error.invalid"),
       path: ["confirmPassword"],
     });
 
@@ -42,7 +42,7 @@ export const ResetPass = () => {
   };
 
   return (
-    <AuthContainer header={t("auth.resetpass")}>
+    <AuthContainer header={t("auth.resetPass")}>
       <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
         {/* Password Input */}
         <label
@@ -69,13 +69,13 @@ export const ResetPass = () => {
           className={`my-[3px] mt-3 font-bold cursor-pointer ${
             errors.confirmPassword && "text-error-main"
           }`}>
-          {t("confirmpassword.label")}
+          {t("confirmPassword.label")}
         </label>
         <OutlinedInput
           id="confirmPassword"
           type="password"
           error={errors.confirmPassword && true}
-          placeholder={t("confirmpassword.placeholder")}
+          placeholder={t("confirmPassword.placeholder")}
           {...register("confirmPassword")}
         />
         {errors.confirmPassword && (

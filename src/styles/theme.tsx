@@ -309,7 +309,7 @@ const brandDark = createTheme({
       main: "#208d8e",
     },
     secondary: {
-      main: "#15aabf",
+      main: "#54bee8",
     },
   },
   typography: {

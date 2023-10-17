@@ -42,11 +42,36 @@ export const UserInfo = () => {
   const [t] = useTranslation("translation");
 
   // Define the validation schema using Zod
-  const schema = z.object({
-    firstName: z.string().min(3).max(20),
-    lastName: z.string().min(3).max(20),
-    phoneNumber: z.string().min(10).max(20),
-  });
+  const schema = z
+    .object({
+      username: z
+        .string()
+        .min(3, t("username.error.length"))
+        .regex(/^[a-zA-Z0-9_]+$/, t("username.error.invalid")),
+      email: z.string().email(t("email.error.invalid")),
+      password: z
+        .string()
+        .min(8, t("password.error.length"))
+        .regex(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/,
+          t("password.error.invalid")
+        ),
+      newPassword: z
+        .string()
+        .min(8, t("password.error.length"))
+        .regex(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/,
+          t("password.error.invalid")
+        ),
+      confirmNewPassword: z.string(),
+      guidelines: z.boolean().refine((value) => value === true, {
+        message: t("guidelines.error.invalid"),
+      }),
+    })
+    .refine((data) => data.newPassword === data.confirmNewPassword, {
+      message: t("confirmPassword.error.invalid"),
+      path: ["confirmPassword"],
+    });
 
   // Form submission handler
   const onSubmit = (data: FieldValues) => {
@@ -67,7 +92,7 @@ export const UserInfo = () => {
       <div>
         {/* User Info Header */}
         <Typography fontSize={30} variant="h3" fontWeight={800} mb={6}>
-          {t("btn.profile.userinfo")}
+          {t("btn.profile.userInfo")}
         </Typography>
       </div>
       <div className="flex items-center gap-4 relative">
