@@ -3,6 +3,7 @@ import { NavBar } from "./NavBar/NavBar/NavBar";
 import { Background, BackgroundShape } from "./Background";
 import { ProfileSideBar } from "./ProfileSideBar/ProfileSideBar";
 import { InputForm } from "./Forms";
+import { ColorPicker } from "./ColorPicker/ColorPicker";
 
 export {
   NavBar,
@@ -11,4 +12,5 @@ export {
   BackgroundShape,
   AuthContainer,
   InputForm,
+  ColorPicker,
 };

@@ -62,5 +62,9 @@ export interface IAccountInfoFormData {
 
 export interface IProfileSideBarProps {
   children: React.ReactNode;
-  selectedPage: (data: "userinfo" | "accountinfo" | "accountsetting") => void;
+  selectedPage: (data: "userInfo" | "accountInfo" | "accountSetting") => void;
+}
+
+export interface IColorPicker {
+  selectedColor: (color: string) => void;
 }

@@ -13,17 +13,17 @@ export const ProfileSideBar = ({
 }: IProfileSideBarProps) => {
   // Initialize necessary hooks and variables
   const [pageState, setPageState] = useState<
-    "userinfo" | "accountinfo" | "accountsetting"
-  >("userinfo");
+    "userInfo" | "accountInfo" | "accountSetting"
+  >("userInfo");
   const [t] = useTranslation("translation");
   const theme = useTheme();
 
   // Function to handle button clicks and update the selected page
   const handleClick = (state: string) => {
     if (
-      state === "userinfo" ||
-      state === "accountinfo" ||
-      state === "accountsetting"
+      state === "userInfo" ||
+      state === "accountInfo" ||
+      state === "accountSetting"
     ) {
       setPageState(state);
       selectedPage(state);
@@ -77,17 +77,17 @@ export const ProfileSideBar = ({
             {
               label: t("btn.profile.userInfo"),
               icon: <PersonIcon sx={{ marginLeft: 1 }} />,
-              state: "userinfo",
+              state: "userInfo",
             },
             {
               label: t("btn.profile.accountInfo"),
               icon: <AccountBoxIcon fontSize="large" sx={{ marginLeft: 1 }} />,
-              state: "accountinfo",
+              state: "accountInfo",
             },
             {
               label: t("btn.profile.accountSetting"),
               icon: <ManageAccountsIcon sx={{ marginLeft: 1 }} />,
-              state: "accountsetting",
+              state: "accountSetting",
             },
           ].map(({ label, icon, state }) => (
             <Button
