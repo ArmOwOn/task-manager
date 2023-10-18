@@ -27,6 +27,10 @@
     }
   },
 
+  "accountSetting": {
+    "themes": "Themes"
+  },
+
   "navBar": {
     "logo": "Quera Task Manager",
     "message": {
