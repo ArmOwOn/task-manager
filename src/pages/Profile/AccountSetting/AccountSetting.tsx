@@ -27,7 +27,7 @@ export const AccountSetting = () => {
         fontWeight={800}
         color="text.primary"
         mb={6}>
-        {t("btn.profile.userInfo")}
+        {t("btn.profile.accountSetting")}
       </Typography>
 
       {/* Theme picker */}

@@ -43,12 +43,14 @@ export const AccountInfo = () => {
   ];
 
   return (
-    <InputForm
-      formTitle={t("btn.profile.accountInfo")}
-      schema={schema}
-      fields={fields}
-      onSubmit={onSubmit}
-      submitLabel={t("btn.saveChanges")}
-    />
+    <div className="w-[400px]">
+      <InputForm
+        formTitle={t("btn.profile.accountInfo")}
+        schema={schema}
+        fields={fields}
+        onSubmit={onSubmit}
+        submitLabel={t("btn.saveChanges")}
+      />
+    </div>
   );
 };

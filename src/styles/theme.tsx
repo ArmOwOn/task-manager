@@ -8,7 +8,7 @@ const blueLight = createTheme({
       main: "#228be6",
     },
     secondary: {
-      main: "#f7b103",
+      main: "#D8E329",
     },
     background: {
       paper: "#d0ebff",
@@ -25,6 +25,9 @@ const redLight = createTheme({
     primary: {
       main: "#fa5252",
     },
+    secondary: {
+      main: "#299BE3",
+    },
     background: {
       paper: "#ffe3e3",
     },
@@ -39,6 +42,9 @@ const pinkLight = createTheme({
     mode: "light",
     primary: {
       main: "#e64980",
+    },
+    secondary: {
+      main: "#29BDE3",
     },
     background: {
       paper: "#ffdeeb",
@@ -55,6 +61,9 @@ const grapeLight = createTheme({
     primary: {
       main: "#be4bdb",
     },
+    secondary: {
+      main: "#E3296D",
+    },
     background: {
       paper: "#f3d9fa",
     },
@@ -69,6 +78,9 @@ const violetLight = createTheme({
     mode: "light",
     primary: {
       main: "#7950f2",
+    },
+    secondary: {
+      main: "#E38129",
     },
     background: {
       paper: "#e5dbff",
@@ -85,6 +97,9 @@ const indigoLight = createTheme({
     primary: {
       main: "#4c6ef5",
     },
+    secondary: {
+      main: "#B929E3",
+    },
     background: {
       paper: "#dbe4ff",
     },
@@ -100,6 +115,9 @@ const cyanLight = createTheme({
     primary: {
       main: "#15aabf",
     },
+    secondary: {
+      main: "#AF29E3",
+    },
     background: {
       paper: "#c5f6fa",
     },
@@ -114,6 +132,9 @@ const tealLight = createTheme({
     mode: "light",
     primary: {
       main: "#12b886",
+    },
+    secondary: {
+      main: "#29A1E3",
     },
     background: {
       paper: "#c3fae8",
@@ -148,6 +169,9 @@ const greenLight = createTheme({
     primary: {
       main: "#40c057",
     },
+    secondary: {
+      main: "#BF523F",
+    },
     background: {
       paper: "#d3f9d8",
     },
@@ -162,6 +186,9 @@ const yellowLight = createTheme({
     mode: "light",
     primary: {
       main: "#FAB005",
+    },
+    secondary: {
+      main: "#5329E3",
     },
     background: {
       paper: "#FFF3BF",
@@ -178,6 +205,9 @@ const limeLight = createTheme({
     primary: {
       main: "#82c91e",
     },
+    secondary: {
+      main: "#498E4F",
+    },
     background: {
       paper: "#e9fac8",
     },
@@ -193,6 +223,9 @@ const orangeLight = createTheme({
     primary: {
       main: "#fd7e14",
     },
+    secondary: {
+      main: "#8F83E6",
+    },
     background: {
       paper: "#ffe8cc",
     },
@@ -207,10 +240,10 @@ const blueDark = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#f7b103",
+      main: "#228be6",
     },
     secondary: {
-      main: "#15aabf",
+      main: "#D8E329",
     },
   },
   typography: {
@@ -224,6 +257,9 @@ const redDark = createTheme({
     primary: {
       main: "#fa5252",
     },
+    secondary: {
+      main: "#299BE3",
+    },
   },
   typography: {
     fontFamily: "IRANYekan, Roboto",
@@ -235,6 +271,9 @@ const pinkDark = createTheme({
     mode: "dark",
     primary: {
       main: "#e64980",
+    },
+    secondary: {
+      main: "#29BDE3",
     },
   },
   typography: {
@@ -248,6 +287,9 @@ const grapeDark = createTheme({
     primary: {
       main: "#be4bdb",
     },
+    secondary: {
+      main: "#E3296D",
+    },
   },
   typography: {
     fontFamily: "IRANYekan, Roboto",
@@ -259,6 +301,9 @@ const violetDark = createTheme({
     mode: "dark",
     primary: {
       main: "#7950f2",
+    },
+    secondary: {
+      main: "#E38129",
     },
   },
   typography: {
@@ -272,6 +317,9 @@ const indigoDark = createTheme({
     primary: {
       main: "#4c6ef5",
     },
+    secondary: {
+      main: "#B929E3",
+    },
   },
   typography: {
     fontFamily: "IRANYekan, Roboto",
@@ -284,6 +332,9 @@ const cyanDark = createTheme({
     primary: {
       main: "#15aabf",
     },
+    secondary: {
+      main: "#AF29E3",
+    },
   },
   typography: {
     fontFamily: "IRANYekan, Roboto",
@@ -295,6 +346,9 @@ const tealDark = createTheme({
     mode: "dark",
     primary: {
       main: "#12b886",
+    },
+    secondary: {
+      main: "#29A1E3",
     },
   },
   typography: {
@@ -309,7 +363,7 @@ const brandDark = createTheme({
       main: "#208d8e",
     },
     secondary: {
-      main: "#54bee8",
+      main: "#15aabf",
     },
   },
   typography: {
@@ -323,6 +377,9 @@ const greenDark = createTheme({
     primary: {
       main: "#40c057",
     },
+    secondary: {
+      main: "#BF523F",
+    },
   },
   typography: {
     fontFamily: "IRANYekan, Roboto",
@@ -334,6 +391,9 @@ const yellowDark = createTheme({
     mode: "dark",
     primary: {
       main: "#FAB005",
+    },
+    secondary: {
+      main: "#5329E3",
     },
   },
   typography: {
@@ -347,6 +407,9 @@ const limeDark = createTheme({
     primary: {
       main: "#82c91e",
     },
+    secondary: {
+      main: "#498E4F",
+    },
   },
   typography: {
     fontFamily: "IRANYekan, Roboto",
@@ -358,6 +421,9 @@ const orangeDark = createTheme({
     mode: "dark",
     primary: {
       main: "#fd7e14",
+    },
+    secondary: {
+      main: "#8F83E6",
     },
   },
   typography: {
