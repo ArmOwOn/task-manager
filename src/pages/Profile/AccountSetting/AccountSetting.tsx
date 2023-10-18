@@ -1,4 +1,4 @@
-import { Typography, Paper } from "@mui/material";
+import { Typography, Paper, Box, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { ColorPicker, LangToggle, DarkMode } from "../../../components";
 import { IThemeChangerState } from "../../../models/interfaces";
@@ -31,12 +31,37 @@ export const AccountSetting = () => {
       </Typography>
 
       {/* Theme picker */}
-      <Typography fontSize={15} color="text.primary">
+      <Typography
+        fontSize={15}
+        fontWeight={600}
+        color="text.primary"
+        sx={{ paddingX: 3 }}>
         {t("accountSetting.themes")}
       </Typography>
-      <div className="mb-10">
-        <ColorPicker selectedColor={selectedColor} />
-      </div>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          width: "fit-content",
+          marginBottom: 5,
+          marginTop: 1,
+          paddingTop: 3,
+          border: 3,
+          borderColor: "primary.main",
+          borderRadius: 50,
+          overflow: "hidden",
+          background: `linear-gradient(90deg, ${
+            useTheme().palette.secondary.main
+          } 0%, ${useTheme().palette.primary.main}  100%)`,
+        }}>
+        <Paper
+          sx={{
+            backgroundColor: "background.paper",
+            paddingX: 2,
+          }}>
+          <ColorPicker selectedColor={selectedColor} />
+        </Paper>
+      </Box>
       <Paper
         sx={{
           display: "flex",

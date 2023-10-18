@@ -190,7 +190,7 @@ export const UserInfo = () => {
         variant="contained"
         type="submit"
         size="large"
-        sx={{ mt: 6, fontWeight: 600 }}>
+        sx={{ mt: 6, fontWeight: 600, color: "background.default" }}>
         {t("btn.saveChanges")}
       </Button>
     </form>
