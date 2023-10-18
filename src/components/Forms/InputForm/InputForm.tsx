@@ -30,7 +30,12 @@ export const InputForm: React.FC<IInputFormProps> = ({
     <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
       {/* Form title */}
       {formTitle && (
-        <Typography fontSize={30} variant="h3" fontWeight={800} mb={6}>
+        <Typography
+          fontSize={30}
+          variant="h3"
+          fontWeight={800}
+          color="text.primary"
+          mb={6}>
           {formTitle}
         </Typography>
       )}
@@ -46,10 +51,10 @@ export const InputForm: React.FC<IInputFormProps> = ({
               {/* Field label */}
               <label
                 htmlFor={field.name}
-                className={`my-[3px] mt-2 font-bold cursor-pointer ${
-                  errors[field.name]?.message && "text-error-main"
-                }`}>
-                {field.label}
+                className="my-[3px] mt-2 font-bold cursor-pointer">
+                <Typography fontSize={15} fontWeight={600} color="text.primary">
+                  {field.label}
+                </Typography>
               </label>
             </div>
           ) : (
@@ -57,10 +62,10 @@ export const InputForm: React.FC<IInputFormProps> = ({
               {/* Field label */}
               <label
                 htmlFor={field.name}
-                className={`my-[3px] mt-2 font-bold cursor-pointer ${
-                  errors[field.name]?.message && "text-error-main"
-                }`}>
-                {field.label}
+                className="my-[3px] mt-2 font-bold cursor-pointer">
+                <Typography fontSize={15} fontWeight={600} color="text.primary">
+                  {field.label}
+                </Typography>
               </label>
 
               {/* Other input field with error handling */}
@@ -98,7 +103,7 @@ export const InputForm: React.FC<IInputFormProps> = ({
         variant="contained"
         type="submit"
         size="large"
-        sx={{ mt: 6, fontWeight: 600 }}>
+        sx={{ mt: 6, fontWeight: 600, color: "background.default" }}>
         {submitLabel}
       </Button>
     </form>

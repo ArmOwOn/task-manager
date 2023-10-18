@@ -90,7 +90,12 @@ export const UserInfo = () => {
     <form className="flex flex-col w-[400px]" onSubmit={handleSubmit(onSubmit)}>
       <div>
         {/* User Info Header */}
-        <Typography fontSize={30} variant="h3" fontWeight={800} mb={6}>
+        <Typography
+          fontSize={30}
+          variant="h3"
+          color="text.primary"
+          fontWeight={800}
+          mb={6}>
           {t("btn.profile.userInfo")}
         </Typography>
       </div>
@@ -103,7 +108,11 @@ export const UserInfo = () => {
           <input type="file" id="profilePic" className="hidden" />
           <PhotoCameraIcon fontSize="large" />
         </label>
-        <Typography fontSize={25} variant="h5" fontWeight={600}>
+        <Typography
+          fontSize={25}
+          variant="h5"
+          color="text.primary"
+          fontWeight={600}>
           {fullName}
         </Typography>
       </div>
@@ -123,7 +132,9 @@ export const UserInfo = () => {
         className={`my-[3px] mt-3 font-bold cursor-pointer ${
           errors.firstName && "text-error-main"
         }`}>
-        {t("userInfo.firstName")}
+        <Typography fontSize={15} fontWeight={600} color="text.primary">
+          {t("userInfo.firstName")}
+        </Typography>
       </label>
       <OutlinedInput
         id="firstName"
@@ -140,7 +151,9 @@ export const UserInfo = () => {
         className={`my-[3px] mt-3 font-bold cursor-pointer ${
           errors.lastName && "text-error-main"
         }`}>
-        {t("userInfo.lastName")}
+        <Typography fontSize={15} fontWeight={600} color="text.primary">
+          {t("userInfo.lastName")}
+        </Typography>
       </label>
       <OutlinedInput
         id="lastName"
@@ -157,7 +170,9 @@ export const UserInfo = () => {
         className={`my-[3px] mt-3 font-bold cursor-pointer ${
           errors.phoneNumber && "text-error-main"
         }`}>
-        {t("userInfo.phoneNumber")}
+        <Typography fontSize={15} fontWeight={600} color="text.primary">
+          {t("userInfo.phoneNumber")}
+        </Typography>
       </label>
       <OutlinedInput
         id="phoneNumber"
@@ -171,7 +186,11 @@ export const UserInfo = () => {
       )}
 
       {/* Save Changes Button */}
-      <Button variant="contained" type="submit" size="large" sx={{ mt: 6 }}>
+      <Button
+        variant="contained"
+        type="submit"
+        size="large"
+        sx={{ mt: 6, fontWeight: 600 }}>
         {t("btn.saveChanges")}
       </Button>
     </form>

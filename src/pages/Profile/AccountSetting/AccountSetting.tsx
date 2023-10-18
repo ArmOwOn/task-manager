@@ -1,33 +1,39 @@
 import { Typography, Paper } from "@mui/material";
-import * as React from "react";
 import { useTranslation } from "react-i18next";
-import { ColorPicker } from "../../../components";
-import { DarkMode } from "../../../components/NavBar/DarkMode/DarkMode";
-import { LangToggle } from "../../../components/NavBar/LangToggle/LangToggle";
-import Cookies from "js-cookie";
+import { ColorPicker, LangToggle, DarkMode } from "../../../components";
+import { IThemeChangerState } from "../../../models/interfaces";
+import { themeChange } from "../../../features";
+import { useSelector, useDispatch } from "react-redux";
 
 export const AccountSetting = () => {
   // Initialize necessary hooks and variables;
-  const [theme, setTheme] = React.useState(
-    Cookies.get("theme") || "brandlight"
+  const theme = useSelector(
+    (state: IThemeChangerState) => state.themeChanger.theme
   );
+  const dispatch = useDispatch();
   const [t] = useTranslation("transolation");
 
   const selectedColor = (color: string) => {
     const newTheme = theme.includes("Light") ? `${color}Light` : `${color}Dark`;
-    setTheme(newTheme);
-    Cookies.set("theme", newTheme, { expires: 365 });
+    dispatch(themeChange(newTheme));
   };
 
   return (
     <>
       {/* Account Setting Header */}
-      <Typography fontSize={30} variant="h3" fontWeight={800} mb={6}>
+      <Typography
+        fontSize={30}
+        variant="h3"
+        fontWeight={800}
+        color="text.primary"
+        mb={6}>
         {t("btn.profile.userInfo")}
       </Typography>
 
       {/* Theme picker */}
-      <p>{t("accountSetting.themes")}</p>
+      <Typography fontSize={15} color="text.primary">
+        {t("accountSetting.themes")}
+      </Typography>
       <div className="mb-10">
         <ColorPicker selectedColor={selectedColor} />
       </div>

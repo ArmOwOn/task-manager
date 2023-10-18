@@ -12,7 +12,6 @@ export const themeChangerSlice = createSlice({
     themeChange: (state, action) => {
       state.theme = action.payload;
       Cookies.set("theme", action.payload, { expires: 365 });
-      console.log(action.payload);
     },
   },
 });

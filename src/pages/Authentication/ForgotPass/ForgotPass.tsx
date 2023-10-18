@@ -3,6 +3,7 @@ import { AuthContainer, InputForm } from "../../../components";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useCustomSchema } from "../../../models/schemas";
+import { Typography } from "@mui/material";
 
 export const ForgotPass = () => {
   // Initialize necessary hooks and variables
@@ -30,7 +31,12 @@ export const ForgotPass = () => {
     <AuthContainer header={t("auth.forgotPass")}>
       {isSent ? (
         // Display a message when the form is submitted
-        <div className="text-center"> {t("forgotPass")} </div>
+        <div className="text-center">
+          {" "}
+          <Typography fontSize={15} color="text.primary">
+            {t("forgotPass")}
+          </Typography>
+        </div>
       ) : (
         <>
           <InputForm

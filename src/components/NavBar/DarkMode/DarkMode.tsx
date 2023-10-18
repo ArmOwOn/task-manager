@@ -1,13 +1,14 @@
-import * as React from "react";
 import { IconButton } from "@mui/material";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { useSelector, useDispatch } from "react-redux";
-import { themeChange } from "../../../features/themeChanger/themeChangerSlice";
+import { themeChange } from "../../../features";
+import { IThemeChangerState } from "../../../models/interfaces";
 
 export const DarkMode = () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const theme = useSelector((state: any) => state.themeChanger.theme);
+  const theme = useSelector(
+    (state: IThemeChangerState) => state.themeChanger.theme
+  );
   const dispatch = useDispatch();
   const handleClick = () => {
     const newTheme = theme.includes("Light")
@@ -21,7 +22,7 @@ export const DarkMode = () => {
       onClick={handleClick}
       color="inherit"
       sx={{ color: "primary.main" }}>
-      {theme.includes("Dark") ? <Brightness7Icon /> : <Brightness4Icon />}
+      {theme.includes("Light") ? <Brightness7Icon /> : <Brightness4Icon />}
     </IconButton>
   );
 };

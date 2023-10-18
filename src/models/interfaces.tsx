@@ -68,3 +68,37 @@ export interface IProfileSideBarProps {
 export interface IColorPicker {
   selectedColor: (color: string) => void;
 }
+
+export type IThemes =
+  | "blueLight"
+  | "redLight"
+  | "pinkLight"
+  | "grapeLight"
+  | "violetLight"
+  | "indigoLight"
+  | "cyanLight"
+  | "tealLight"
+  | "brandLight"
+  | "greenLight"
+  | "yellowLight"
+  | "limeLight"
+  | "orangeLight"
+  | "blueDark"
+  | "redDark"
+  | "pinkDark"
+  | "grapeDark"
+  | "violetDark"
+  | "indigoDark"
+  | "cyanDark"
+  | "tealDark"
+  | "brandDark"
+  | "greenDark"
+  | "yellowDark"
+  | "limeDark"
+  | "orangeDark";
+
+export interface IThemeChangerState {
+  themeChanger: {
+    theme: IThemes;
+  };
+}

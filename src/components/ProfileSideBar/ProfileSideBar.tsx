@@ -58,7 +58,10 @@ export const ProfileSideBar = ({
         </Typography>
         {/* Back button */}
         <div className="mt-[50px]">
-          <Button color="primary" variant="contained" sx={{ fontWeight: 600 }}>
+          <Button
+            color="primary"
+            variant="contained"
+            sx={{ fontWeight: 600, color: "background.default" }}>
             <ArrowBackIcon
               fontSize="small"
               className={
@@ -93,11 +96,16 @@ export const ProfileSideBar = ({
             <Button
               key={state}
               variant={pageState === state ? "contained" : "outlined"}
+              color="inherit"
               onClick={() => handleClick(state)}
               sx={{
                 justifyContent: "flex-start",
                 border: 2,
                 fontWeight: 600,
+                color: "primary.main",
+                backgroundColor: `${
+                  pageState === state ? "background.paper" : "transparent"
+                }`,
               }}
               startIcon={icon}>
               {label}

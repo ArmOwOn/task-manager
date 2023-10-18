@@ -35,7 +35,7 @@ export const ResetPass = () => {
         schema={schema}
         fields={fields}
         onSubmit={onSubmit}
-        submitLabel={t("btn.signup")}
+        submitLabel={t("btn.saveChanges")}
       />
     </AuthContainer>
   );

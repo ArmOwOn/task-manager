@@ -16,7 +16,13 @@ export const AuthContainer = ({ header, children }: IAuthContainerProps) => {
         overflow: "hidden",
       }}
       className="brightness-120">
-      <Typography fontSize={30} variant="h3" fontWeight={800} mb={4} mt={1}>
+      <Typography
+        fontSize={30}
+        variant="h3"
+        fontWeight={800}
+        mb={4}
+        mt={1}
+        color="text.primary">
         {header}
       </Typography>
       <div className="w-full">{children}</div>

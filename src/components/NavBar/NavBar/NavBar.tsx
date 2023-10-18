@@ -1,6 +1,5 @@
 import { Typography, Box, Button, Toolbar, useTheme } from "@mui/material";
-import { LangToggle } from "../LangToggle/LangToggle";
-import { DarkMode } from "../DarkMode/DarkMode";
+import { LangToggle, DarkMode } from "..";
 import { useTranslation } from "react-i18next";
 
 export const NavBar = () => {
@@ -43,14 +42,14 @@ export const NavBar = () => {
             {/* Right side of the navbar */}
             <div className="flex items-center">
               {/* Message */}
-              <Typography fontSize={15} mx={1} sx={{ color: "text.primary" }}>
+              <Typography fontSize={15} mx={1} color="text.primary">
                 {t("navBar.message.notHave")}
               </Typography>
               {/* Login button */}
               <Button
                 color="primary"
                 variant="contained"
-                sx={{ fontWeight: 600 }}>
+                sx={{ fontWeight: 600, color: "background.default" }}>
                 {t("btn.login")}
               </Button>
             </div>
