@@ -7,14 +7,18 @@ import App from "./app/App.tsx";
 import "./models/i18next.tsx";
 import React from "react";
 import "./index.css";
+import { store } from "./store/store";
+import { Provider } from "react-redux";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <ThemeProvider theme={themes.brandLight}>
-    <React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
       <BrowserRouter>
-        <CssBaseline />
-        <App />
+        <ThemeProvider theme={themes.brandLight}>
+          <CssBaseline />
+          <App />
+        </ThemeProvider>
       </BrowserRouter>
-    </React.StrictMode>
-  </ThemeProvider>
+    </Provider>
+  </React.StrictMode>
 );

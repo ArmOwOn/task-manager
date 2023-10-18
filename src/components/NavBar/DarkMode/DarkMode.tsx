@@ -2,19 +2,18 @@ import * as React from "react";
 import { IconButton } from "@mui/material";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import Cookies from "js-cookie";
+import { useSelector, useDispatch } from "react-redux";
+import { themeChange } from "../../../features/themeChanger/themeChangerSlice";
 
 export const DarkMode = () => {
-  const [theme, setTheme] = React.useState(
-    Cookies.get("theme") || "brandlight"
-  );
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const theme = useSelector((state: any) => state.themeChanger.theme);
+  const dispatch = useDispatch();
   const handleClick = () => {
     const newTheme = theme.includes("Light")
       ? theme.replace("Light", "Dark")
       : theme.replace("Dark", "Light");
-    setTheme(newTheme);
-    Cookies.set("theme", newTheme, { expires: 365 });
+    dispatch(themeChange(newTheme));
   };
 
   return (
