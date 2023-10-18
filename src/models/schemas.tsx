@@ -34,6 +34,7 @@ export const useCustomSchema = (schemaType: string) => {
           path: ["confirmPassword"],
         });
       break;
+
     /////////////////////////////////////////////////
 
     case "login":
@@ -74,6 +75,38 @@ export const useCustomSchema = (schemaType: string) => {
         .refine((data) => data.password === data.confirmPassword, {
           message: t("confirmPassword.error.invalid"),
           path: ["confirmPassword"],
+        });
+      break;
+
+    /////////////////////////////////////////////////
+
+    case "accountInfo":
+      schema = z
+        .object({
+          username: z
+            .string()
+            .min(3, t("username.error.length"))
+            .regex(/^[a-zA-Z0-9_]+$/, t("username.error.invalid")),
+          email: z.string().email(t("email.error.invalid")),
+          password: z
+            .string()
+            .min(8, t("password.error.length"))
+            .regex(
+              /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/,
+              t("password.error.invalid")
+            ),
+          newPassword: z
+            .string()
+            .min(8, t("newPassword.error.length"))
+            .regex(
+              /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/,
+              t("newPassword.error.invalid")
+            ),
+          confirmNewPassword: z.string(),
+        })
+        .refine((data) => data.newPassword === data.confirmNewPassword, {
+          message: t("confirmPassword.error.invalid"),
+          path: ["confirmNewPassword"],
         });
       break;
 

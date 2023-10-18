@@ -69,6 +69,14 @@
       "length": "Password should be at least 8 characters long"
     }
   },
+  "newPassword": {
+    "label": "New password",
+    "placeholder": "Enter your new password",
+    "error": {
+      "invalid": "Must contain one uppercase letter and one lowercase letter and one number",
+      "length": "Password should be at least 8 characters long"
+    }
+  },
   "confirmPassword": {
     "label": "Confirm Password",
     "placeholder": "Confirm your Password",

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Background, NavBar, ProfileSideBar } from "../../../components";
+import { Background, ProfileSideBar } from "../../../components";
 import { AccountInfo, AccountSetting, UserInfo } from "..";
 
 export const ProfileLayout = () => {
@@ -13,7 +13,6 @@ export const ProfileLayout = () => {
 
   return (
     <>
-      <NavBar />
       <Background />
       <ProfileSideBar selectedPage={whatPage}>
         {selectedPage === "userinfo" && <UserInfo />}

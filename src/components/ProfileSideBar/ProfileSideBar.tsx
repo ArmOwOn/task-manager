@@ -7,19 +7,15 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import { IProfileSideBarProps } from "../../models/interfaces";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-// Define the ProfileSideBar component
 export const ProfileSideBar = ({
   children,
   selectedPage,
 }: IProfileSideBarProps) => {
-  // State to keep track of the selected page
+  // Initialize necessary hooks and variables
   const [pageState, setPageState] = useState<
     "userinfo" | "accountinfo" | "accountsetting"
   >("userinfo");
-
-  // Translation function
   const [t] = useTranslation("translation");
-
   const theme = useTheme();
 
   // Function to handle button clicks and update the selected page

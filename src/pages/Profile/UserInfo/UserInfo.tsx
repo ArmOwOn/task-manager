@@ -172,7 +172,7 @@ export const UserInfo = () => {
 
       {/* Save Changes Button */}
       <Button variant="contained" type="submit" size="large" sx={{ mt: 6 }}>
-        {t("btn.savechanges")}
+        {t("btn.saveChanges")}
       </Button>
     </form>
   );
