@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/images/logo.png" />
@@ -14,7 +14,19 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" />
     <title>Task Manager</title>
   </head>
-  <body dir="ltr">
+  <body dir="ltr" lang="en">
+    <script>
+      const cookies = document.cookie.split(";");
+      let i18nextCookieValue;
+      cookies.forEach((cookie) => {
+        const [name, value] = cookie.trim().split("=");
+        if (name === "i18next") {
+          i18nextCookieValue = value;
+        }
+        document.body.lang = i18nextCookieValue;
+        document.body.dir = i18nextCookieValue === "fa" ? "rtl" : "ltr";
+      });
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

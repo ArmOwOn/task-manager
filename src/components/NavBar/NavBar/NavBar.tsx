@@ -1,10 +1,10 @@
-import { Typography, Box, Button, Toolbar, useTheme } from "@mui/material";
+import { Typography, Box, Button, Toolbar } from "@mui/material";
 import { LangToggle, DarkMode } from "..";
 import { useTranslation } from "react-i18next";
+import { Logo } from "../..";
 
 export const NavBar = () => {
   // Initialize necessary hooks and variables
-  const theme = useTheme();
   const [t] = useTranslation("transolation");
 
   return (
@@ -21,17 +21,7 @@ export const NavBar = () => {
             {/* Left side of the navbar */}
             <div className="flex items-center">
               {/* Logo */}
-              <Typography
-                variant="h4"
-                mx={1}
-                sx={{
-                  color: "transparent",
-                  background: `linear-gradient(90deg, ${theme.palette.primary.main} 20%, ${theme.palette.secondary.main}  100%)`,
-                  fontWeight: 800,
-                  WebkitBackgroundClip: "text",
-                }}>
-                {t("navBar.logo")}
-              </Typography>
+              <Logo />
               {/* Language toggle and Dark mode components */}
               <div className="mx-5">
                 <LangToggle />

@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Paper, Button, Typography, useTheme } from "@mui/material";
+import { Paper, Button } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import { IProfileSideBarProps } from "../../models/interfaces";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Logo } from "..";
 
 export const ProfileSideBar = ({
   children,
@@ -16,7 +17,6 @@ export const ProfileSideBar = ({
     "userInfo" | "accountInfo" | "accountSetting"
   >("userInfo");
   const [t] = useTranslation("translation");
-  const theme = useTheme();
 
   // Function to handle button clicks and update the selected page
   const handleClick = (state: string) => {
@@ -44,18 +44,7 @@ export const ProfileSideBar = ({
           paddingX: 3,
         }}>
         {/* Logo */}
-        <Typography
-          variant="h5"
-          mx={1}
-          sx={{
-            color: "transparent",
-            background: `linear-gradient(90deg, ${theme.palette.primary.main} 20%, ${theme.palette.secondary.main}  100%)`,
-            fontWeight: 800,
-            fontSize: 30,
-            WebkitBackgroundClip: "text",
-          }}>
-          {t("navBar.logo")}
-        </Typography>
+        <Logo />
         {/* Back button */}
         <div className="mt-[50px]">
           <Button

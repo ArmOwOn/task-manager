@@ -102,3 +102,15 @@ export interface IThemeChangerState {
     theme: IThemes;
   };
 }
+
+export interface ITabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
+
+export interface ITabBarProps {
+  listView: React.ReactNode;
+  columnView: React.ReactNode;
+  calendarView: React.ReactNode;
+}

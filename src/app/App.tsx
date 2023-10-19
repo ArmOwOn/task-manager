@@ -2,6 +2,7 @@ import {
   AuthLayout,
   ForgotPass,
   Login,
+  MainLayout,
   ProfileLayout,
   Register,
   ResetPass,
@@ -21,7 +22,7 @@ function App() {
   return (
     <ThemeProvider theme={themes[theme]}>
       <Routes>
-        <Route path="/" element={<Navigate to="/profile" />} />
+        <Route path="/" element={<Navigate to="/main" />} />
         <Route path="/authentication" element={<AuthLayout />}>
           <Route path="/authentication" element={<Navigate to="login" />} />
           <Route path="login" element={<Login />} />
@@ -30,6 +31,7 @@ function App() {
           <Route path="resetpass" element={<ResetPass />} />
         </Route>
         <Route path="/profile" element={<ProfileLayout />}></Route>
+        <Route path="/main" element={<MainLayout />}></Route>
       </Routes>
     </ThemeProvider>
   );
