@@ -7,7 +7,7 @@ import { ColorPicker } from "./ColorPicker/ColorPicker";
 import { Logo } from "./Logo/Logo";
 import { TabBar } from "./TabBar/TabBar";
 import { MainSideBar } from "./MainSideBar";
-import { ColumnViewHeader } from "./ColumnViewHeader/ColumnViewHeader";
+import { ColumnViewHeader } from "./ColumnViewComponents";
 
 export {
   ProfileSideBar,

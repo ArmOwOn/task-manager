@@ -21,6 +21,7 @@
     "@mui/icons-material": "^5.14.13",
     "@mui/material": "^5.14.13",
     "@reduxjs/toolkit": "^1.9.7",
+    "@uidotdev/usehooks": "^2.4.0",
     "axios": "^1.5.1",
     "i18next": "^23.5.1",
     "i18next-browser-languagedetector": "^7.1.0",

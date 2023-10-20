@@ -69,5 +69,15 @@ export default {
       },
     },
   },
+  safelist: [
+    {
+      pattern:
+        /bg-(blue|red|pink|grape|violet|indigo|cyan|teal|brand|green|yellow|lime|orange)-(primary|secondary)/,
+    },
+    {
+      pattern:
+        /text-(blue|red|pink|grape|violet|indigo|cyan|teal|brand|green|yellow|lime|orange)-(primary|secondary)/,
+    },
+  ],
   plugins: [],
 };

@@ -114,3 +114,12 @@ export interface ITabBarProps {
   columnView: React.ReactNode;
   calendarView: React.ReactNode;
 }
+
+export interface IColumnViewHeader {
+  color?: string;
+  label?: string;
+  onEdit?: () => void;
+  onAdd?: () => void;
+  onArchive?: () => void;
+  onDelete?: () => void;
+}
