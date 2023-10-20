@@ -1,2 +1,3 @@
 import { MainLayout } from "./MainLayout/MainLayout";
-export { MainLayout };
+import { ColumnView } from "./ColumnView/ColumnView";
+export { MainLayout, ColumnView };

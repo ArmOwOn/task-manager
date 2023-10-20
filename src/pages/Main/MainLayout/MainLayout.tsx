@@ -1,13 +1,17 @@
-import { TabBar, MainSideBar } from "../../../components";
+import { ColumnView } from "..";
+import { TabBar, MainSideBar, Background } from "../../../components";
 
 export const MainLayout = () => {
   return (
-    <MainSideBar>
-      <TabBar
-        listView={<div className="bg-red-primary w-full h-full " />}
-        columnView={<div className="bg-blue-primary w-full h-full" />}
-        calendarView={<div className="bg-green-primary w-full h-full" />}
-      />
-    </MainSideBar>
+    <>
+      <Background />
+      <MainSideBar>
+        <TabBar
+          listView={<ColumnView />}
+          columnView={<div className="bg-blue-primary w-full h-full" />}
+          calendarView={<div className="bg-green-primary w-full h-full" />}
+        />
+      </MainSideBar>
+    </>
   );
 };

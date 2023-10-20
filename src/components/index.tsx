@@ -7,6 +7,7 @@ import { ColorPicker } from "./ColorPicker/ColorPicker";
 import { Logo } from "./Logo/Logo";
 import { TabBar } from "./TabBar/TabBar";
 import { MainSideBar } from "./MainSideBar";
+import { ColumnViewHeader } from "./ColumnViewHeader/ColumnViewHeader";
 
 export {
   ProfileSideBar,
@@ -17,6 +18,7 @@ export {
   InputForm,
   ColorPicker,
   NavBar,
+  ColumnViewHeader,
   LangToggle,
   DarkMode,
   Logo,
