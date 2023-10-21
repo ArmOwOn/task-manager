@@ -51,7 +51,7 @@ export default {
         },
         yellow: {
           primary: "#fab005",
-          secondary: "fff3bf",
+          secondary: "#fff3bf",
         },
         lime: {
           primary: "#82c91e",

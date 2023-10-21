@@ -6,7 +6,7 @@ import EditNoteIcon from "@mui/icons-material/EditNote";
 import InboxIcon from "@mui/icons-material/Inbox";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useClickAway } from "@uidotdev/usehooks";
-import { IColumnViewHeader } from "../../../models/interfaces";
+import { IColumnViewHeaderProps } from "../../../models/interfaces";
 
 const MoreContainer = () => {
   return (
@@ -63,7 +63,7 @@ const MoreContainer = () => {
 export const ColumnViewHeader = ({
   label,
   color = "blue",
-}: IColumnViewHeader) => {
+}: IColumnViewHeaderProps) => {
   const count = 3;
   const [viewMore, setViewMore] = React.useState(false);
   const MoreRef = useClickAway<HTMLDivElement>(() => {

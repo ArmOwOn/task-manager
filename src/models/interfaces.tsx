@@ -115,11 +115,29 @@ export interface ITabBarProps {
   calendarView: React.ReactNode;
 }
 
-export interface IColumnViewHeader {
+export interface IColumnViewHeaderProps {
   color?: string;
   label?: string;
   onEdit?: () => void;
   onAdd?: () => void;
   onArchive?: () => void;
   onDelete?: () => void;
+}
+
+export interface ISimpleTagProps {
+  title: string;
+  color:
+    | "red"
+    | "pink"
+    | "grape"
+    | "violet"
+    | "indigo"
+    | "blue"
+    | "cyan"
+    | "teal"
+    | "brand"
+    | "green"
+    | "yellow"
+    | "lime"
+    | "orange";
 }

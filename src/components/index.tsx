@@ -7,7 +7,8 @@ import { ColorPicker } from "./ColorPicker/ColorPicker";
 import { Logo } from "./Logo/Logo";
 import { TabBar } from "./TabBar/TabBar";
 import { MainSideBar } from "./MainSideBar";
-import { ColumnViewHeader } from "./ColumnViewComponents";
+import { ColumnViewHeader, ColumnViewTask } from "./ColumnViewComponents";
+import { SimpleTag } from "./Tags";
 
 export {
   ProfileSideBar,
@@ -23,4 +24,6 @@ export {
   DarkMode,
   Logo,
   TabBar,
+  ColumnViewTask,
+  SimpleTag,
 };

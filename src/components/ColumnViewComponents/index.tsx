@@ -1,3 +1,3 @@
 import { ColumnViewHeader } from "./ColumnViewHeader/ColumnViewHeader";
-
-export { ColumnViewHeader };
+import { ColumnViewTask } from "./ColumnViewTasks/ColumnViewTask";
+export { ColumnViewHeader, ColumnViewTask };
